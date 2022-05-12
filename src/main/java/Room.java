@@ -1,12 +1,15 @@
 public class Room {
 
+    private int roomNumber;
     private String guests;
     private int capacity;
     RoomType roomType;
 
-    public Room(String guests, int capacity) {
+    public Room(String guests, int roomNumber, int capacity) {
         this.guests = guests;
         this.capacity = capacity;
+        this.roomNumber = roomNumber;
+
     }
 
     public Room(RoomType roomType) {
@@ -15,6 +18,10 @@ public class Room {
 
     public int getValueFromEnum() {
         return this.roomType.getValue();
+    }
+
+    public int getValueFromNumber() {
+        return this.roomType.getRoomNumber();
     }
 
     public String getGuests() {
@@ -33,6 +40,8 @@ public class Room {
         this.capacity = capacity;
     }
 
+//    public int getValue() {
+//    }
 }
 
 

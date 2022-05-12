@@ -9,6 +9,7 @@ public class HotelTest {
     private Room room;
     private Room room2;
     private Room room3;
+    private Guest guest;
 
     private Bedroom bedroom;
 
@@ -18,6 +19,7 @@ public class HotelTest {
         room2 = new Room(RoomType.DOUBLE);
         room3 = new Room(RoomType.TRIPLE);
         room = new Room(RoomType.FAMILY);
+
 
     }
 
@@ -36,6 +38,20 @@ public class HotelTest {
         assertEquals(2,room2.getValueFromEnum());
     }
 
+    @Test
+    public void hasRoomNumber() {
+        assertEquals(21, room2.getValueFromNumber());
+    }
 
+    @Test
+    public void canAddNewGuest() {
+        hotel.addNewGuest(guest);
+        assertEquals(1, hotel.guestCount);
+    }
+
+//    @Test
+//    public void hasRooms() {
+//        assertEquals();
+//    }
 
 }
